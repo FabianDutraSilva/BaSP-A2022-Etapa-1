@@ -116,12 +116,12 @@
                         first name:
                     </label>
                     <!-- name atribute copied from https://www.youtube.com/watch?v=UB1O30fR-EE-->
-                    <input type="text" name="firstname" placeholder="enter name">
+                    <input type="text" name="firstname" placeholder="enter name" id="fname">
                     <label for="email">
                         email:
                     </label>
-                    <input type="text" name="email" placeholder="enter email">
-                    <label for="contact area">
+                    <input type="text" name="email" placeholder="enter email" id="email">
+                    <label for="contact">
                         contact area:
                     </label>
                     <!--i used select instead of radio, as seen on 
@@ -140,11 +140,10 @@
                     <label for="message">
                         message
                     </label>
-                    <!-- ask if its ok name and id atributes not explained on 
-                    https://www.youtube.com/watch?v=UB1O30fR-EE-->
+                    <!--i didn't use placehold because of a bug, it doesn't erase the text while typing-->
                     <textarea name="message" id="message" cols="30" rows="10">
                     </textarea>
-                    <input type="submit" name="confirm" value="confirm">
+                    <input type="submit" name="confirm" value="confirm" id="message">
                 </fieldset>
             </form>
         </section>
@@ -224,7 +223,8 @@
             </table>
         </article>
         <section>
-            <!-- i'm not sure if this h3 should be h2-->
+            <!-- i'm not sure if this h3 should be h2
+            i used h2 because is less important than the other h2 on the web page-->
             <img src="images/shop.jpg" alt="shop-html"  width="50">
             <h3>
                 products
