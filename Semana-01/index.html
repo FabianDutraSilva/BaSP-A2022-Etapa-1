@@ -66,7 +66,7 @@
             leadership & team management
         </h3>
             <p>
-                manage your team´s effort by assigning new proyects,
+                manage your team's effort by assigning new proyects,
                 setting deadlines, roles , and hourly rates for the members
                 of your team.
             </p>
@@ -78,35 +78,49 @@
                 improve your decisión making by having access to this valuable
                 information at any time.
             </p>
-        <h2>
-            information request
-        </h2>
-        <h3>
-            name
-        </h3>
-        <h3>
-            email
-        </h3>
-        <h3>
-            contact area
-        </h3>
-            <ul>
-                <li>
-                    hr department
-                </li>
-                <li>
-                    systems
-                </li>
-                <li>
-                    commercialization
-                </li>              
-            </ul>
-        <h3>
-            message
-        </h3>
-        <h3>
-            confirm
-        </h3>
+        <!-- form: atributes copied from https://www.youtube.com/watch?v=UB1O30fR-EE-->
+        <form action="database request.php" method="post">
+            <fieldset>
+                <legend>
+                    <h2>
+                        information request
+                    </h2> 
+                </legend>
+                <label for="fname">
+                    first name:
+                </label>
+                <!-- name atribute copied from https://www.youtube.com/watch?v=UB1O30fR-EE-->
+                <input type="text" name="firstname" placeholder="enter name">
+                <label for="email">
+                    email:
+                </label>
+                <input type="text" name="email" placeholder="enter email">
+                <label for="contact area">
+                    contact area:
+                </label>
+                 <!--id atribute not sure if its ok-->
+                    <select name="contact area" id="contact">
+                        <option value="hr department">
+                            hr department
+                        </option>
+                        <option value="systems">
+                            systems
+                        </option>
+                        <option value="commercialization">
+                            commercialization
+                        </option>
+                    </select>   
+                <label for="message">
+                    message
+                </label>
+                <!-- ask if its ok name and id atributes not explained on https://www.youtube.com/watch?v=UB1O30fR-EE
+                -->
+                <textarea name="message" id="message" cols="30" rows="10" placeholder="enter your message here">
+                </textarea>
+                <input type="submit" name="confirm" value="confirm">
+            </fieldset>
+        </form>
+
         <h2>
             history
         </h2>
