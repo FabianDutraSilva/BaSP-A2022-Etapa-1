@@ -33,7 +33,7 @@ h1{
     margin: 0px 480px 0px 593px;
 
 }
-.p1{
+.page1{
     margin: 88px 139px 241px 486px;
 }
 #portrait{
@@ -54,4 +54,110 @@ h1{
 
     float: right;
     padding-top: 89px;
+}
+.page2-header{
+    color: #FFFFFF;
+    background: #FF0000;
+
+    width: 186px;
+    height: 33px;
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 33px;
+
+    padding: 20px 145px 19px 141px;
+    margin: 91px 464px 173.76px 576px;
+}
+
+.page2-list{
+    margin: 0px 109px 301.3px  430.73px 
+}
+
+.func-logos{
+    background: #FF0000;
+    width: 140.06px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.page2-text{
+    width: 236.58px;
+    left: 579.15px;
+    top: 336.76px;
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+
+    color: #000000;
+    display: inline-block;
+
+    vertical-align: top;
+}
+
+.page3-header{
+    color: #FFFFFF;
+    background: #FF0000;
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 33px;
+
+    margin: 0px 469px 190px 571px;
+    padding-top: 20px;
+    padding-bottom: 19px;
+
+    text-align: center;
+}
+
+.page3-text{
+    width: 382px;
+}
+
+.page3-logo{
+    width: 70px;
+    display: inline-block;
+}
+
+.page3-title{
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    text-transform: capitalize;
+    vertical-align: top;
+    color: #000000;
+    text-align: center;
+}
+
+.page3-p{
+    width: 381.77px;
+    height: 72.3px;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    align-items: center;
+    text-align: center;
+    
+    color: rgba(0, 0, 0, 0.6);
+}
+.page3-list{
+    margin: 193px 75px 171px  356px 
+}
+.page3-blocktext{
+    display: inline-block;
+    vertical-align: top;
+    padding: 5px 5px;
+}
+
+.page3-item{
+    display: inline-block;
+    margin-right: 111px; 
 }
