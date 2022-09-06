@@ -6,13 +6,11 @@ body{
 h1{
     color: #FFFFFF;
     background: #FF0000;
-
     text-transform: capitalize;
     font-style: normal;
     font-weight: 700;
     font-size: 42px;
     line-height: 49px;
-
     border-radius: 15px;
     padding-top: 24px;
     padding-bottom: 26px;
@@ -43,12 +41,10 @@ h1{
 #portrait-text{
     width: 342px;
     height: 124px;
-
     font-style: italic;
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
-
     color: #000000;
     padding-top: 89px;
     display: inline-block;
@@ -67,48 +63,37 @@ h1{
     border-radius: 10px;
     display: inline-block;
 }
-
 .page2-text{
     width: 236.58px;
     left: 579.15px;
     top: 336.76px;
-
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
     line-height: 38px;
-
     color: #000000;
     display: inline-block;
-
     vertical-align: top;
 }
-
 .page-header{
     color: #FFFFFF;
     background: #FF0000;
-
     font-style: normal;
     font-weight: 700;
     font-size: 28px;
     line-height: 33px;
-
     margin: 10% 20%;
     padding-top: 20px;
     padding-bottom: 19px;
-
     text-align: center;
 }
-
 .page3-text{
     width: 382px;
 }
-
 .page3-logo{
     width: 70px;
     display: inline-block;
 }
-
 .page3-title{
     font-style: normal;
     font-weight: 500;
@@ -119,20 +104,6 @@ h1{
     color: #000000;
     text-align: center;
 }
-
-.page3-p{
-    width: 381.77px;
-    height: 72.3px;
-
-    font-style: normal;
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 18px;
-    align-items: center;
-    text-align: center;
-    
-    color: rgba(0, 0, 0, 0.6);
-}
 .page3-list{
     text-align: center;
 }
@@ -141,30 +112,24 @@ h1{
     vertical-align: top;
     padding: 5px 5px;
 }
-
 .page3-item{
     display: inline-block;
     margin: 5%;
 }
-
 .page4-block{
     margin: 0% 20% 5% 20%;
     background: #E5E5E5;
 }
-
 .page4-header{
     color: #FFFFFF;
     background: #FF0000;
-
     font-style: normal;
     font-weight: 700;
     font-size: 28px;
     line-height: 33px;
-
     margin: 10% 20% 0% 20%;
     padding-top: 20px;
     padding-bottom: 19px;
-
     text-align: center;
 }
 .form-row{
@@ -177,11 +142,9 @@ h1{
     color: #000000;
     text-align: left;
 }
-
 .form-label{
     text-align: left;
 }
-
 .form-input{
     float:right;
 }
@@ -197,20 +160,68 @@ h1{
     text-align: right;
     color: #FFFFFF;
 }
-
-/*.page-header{
-    color: #FFFFFF;
-    background: #FF0000;
-
-    width: 186px;
-    height: 33px;
-
+#page5-content{
+    background-color: coral;
+}
+.history-row{
+    text-align: center;
+}
+.history-block{
+    display: inline-block;
+    width: 20%;
+    height: fit-content;
+    margin: 2%;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 30px;
+}
+.history-p{
+    font-weight: 500;
+    font-size: 100%;
+    line-height: 23px;
+    align-items: center;
+    text-align: center;
+    color: #F8F8F8;
+}
+.history-h{
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 41px;
+    align-items: center;
+    color: #000000;
+}
+.product-block{
+    display: inline-block;
+    width: 20%;
+    margin: 2%;
+    text-align: center;
+}
+#page6{
+    text-align: center;
+}
+.page6-h{
     font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 35px;
+    color: #FF0000;
+    text-transform: capitalize;
+}
+.page6-text{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    color: #747474;
+    padding: 1%
+}
+.foot{
+    text-align: center;
+    margin: 5%;
+    color: #FFFFFF;
+    background-color:#FF0000 ;
     font-weight: 700;
     font-size: 28px;
     line-height: 33px;
-
-    padding: 20px 145px 19px 141px;
-    margin: 91px 464px 173.76px 576px;
-}*/
-
+}
+.footer-img{
+    margin: 1% 5%;
+}
