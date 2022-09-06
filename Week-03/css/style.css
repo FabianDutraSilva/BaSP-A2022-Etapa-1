@@ -148,20 +148,54 @@ h1{
 }
 
 .page4-block{
-    width: 737px;
-    margin-top: 402px;
-    margin-bottom: 313px;
+    margin: 0% 20% 5% 20%;
     background: #E5E5E5;
+}
+
+.page4-header{
+    color: #FFFFFF;
+    background: #FF0000;
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 33px;
+
+    margin: 10% 20% 0% 20%;
+    padding-top: 20px;
+    padding-bottom: 19px;
+
+    text-align: center;
 }
 .form-row{
     font-weight: 700;
     font-size: 22px;
     line-height: 26px;
-    display: flex;
     align-items: center;
-    margin: 5% 20%;
+    margin: 2% 30%;
     background: #E5E5E5;
     color: #000000;
+    text-align: left;
+}
+
+.form-label{
+    text-align: left;
+}
+
+.form-input{
+    float:right;
+}
+#submit-button{
+    vertical-align: bottom;
+    padding: 1% 10%;
+    margin: 2%;
+    background: #FF0000;
+    border-radius: 15px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: right;
+    color: #FFFFFF;
 }
 
 /*.page-header{

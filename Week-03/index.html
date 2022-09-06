@@ -139,41 +139,49 @@
             </section>           
         </section>
         <section id="page4">
-                <h2 class="page-header">
+                <h2 class="page4-header">
                     information request
                 </h2>
-            <form action="database request.php" method="post">
+            <form action="database request.php" method="post" class="page4-block">
                 <fieldset>
                     <section class="form-row">
-                        <label for="fname">
-                            Name:
+                        <label for="fname" class="form-label">
+                            Name
                         </label>
-                        <input type="text" name="firstname" placeholder="enter name" id="fname">
+                        <input type="text" name="firstname" placeholder="enter name" id="fname" class="form-input">
                     </section>
-                    <label for="email">
-                        Email:
-                    </label>
-                    <input type="text" name="email" placeholder="enter email" id="email">
-                    <label for="contact">
-                        Contact area:
-                    </label>
-                    <select name="contact area" id="contact">
-                        <option value="hr department">
-                            HR department
-                        </option>
-                        <option value="systems">
-                            Systems
-                        </option>
-                        <option value="commercialization">
-                            Commercialization
-                        </option>
-                    </select>   
-                    <label for="message">
-                        Message
-                    </label>
-                    <textarea name="message" id="message" cols="30" rows="10">
-                    </textarea>
-                    <input type="submit" name="confirm" value="confirm" id="message">
+                    <section class="form-row">
+                        <label for="email" class="form-label">
+                            Email
+                        </label>
+                        <input type="text" name="email" placeholder="enter email" id="email" class="form-input">
+                    </section>
+                    <section class="form-row">
+                        <label for="contact" class="form-label">
+                            Contact area
+                        </label>
+                        <select name="contact area" id="contact" class="form-input">
+                            <option value="hr department">
+                                HR department
+                            </option>
+                            <option value="systems">
+                                Systems
+                            </option>
+                            <option value="commercialization">
+                                Commercialization
+                            </option>
+                        </select>  
+                    </section> 
+                    <section class="form-row">
+                        <label for="message" class="form-label">
+                            Message
+                        </label>
+                        <textarea name="message" id="message" cols="30" rows="10" class="form-input">
+                        </textarea>
+                    </section>
+                    <section class="form-row">
+                        <input type="submit" name="confirm" value="Confirm" id="submit-button">
+                    </section>
                 </fieldset>
             </form>
         </section>
