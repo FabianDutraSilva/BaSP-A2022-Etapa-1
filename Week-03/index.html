@@ -52,7 +52,7 @@
             </p>
         </section>
         <section id="page2">
-            <h2 class="page2-header">
+            <h2 class="page-header">
                 Functionalities
             </h2>
             <section class="page2-list">
@@ -79,7 +79,7 @@
             </section>
         </section>
         <section id="page3">
-            <h2 class="page3-header">
+            <h2 class="page-header">
                 Why using Trackgenix?
             </h2>
             <section class="page3-list">
@@ -138,38 +138,38 @@
                 </section>       
             </section>           
         </section>
-        <section>
+        <section id="page4">
+                <h2 class="page-header">
+                    information request
+                </h2>
             <form action="database request.php" method="post">
                 <fieldset>
-                    <legend>
-                        <h2>
-                            information request
-                        </h2>
-                    </legend>
-                    <label for="fname">
-                        first name:
-                    </label>
-                    <input type="text" name="firstname" placeholder="enter name" id="fname">
+                    <section class="form-row">
+                        <label for="fname">
+                            Name:
+                        </label>
+                        <input type="text" name="firstname" placeholder="enter name" id="fname">
+                    </section>
                     <label for="email">
-                        email:
+                        Email:
                     </label>
                     <input type="text" name="email" placeholder="enter email" id="email">
                     <label for="contact">
-                        contact area:
+                        Contact area:
                     </label>
                     <select name="contact area" id="contact">
                         <option value="hr department">
-                            hr department
+                            HR department
                         </option>
                         <option value="systems">
-                            systems
+                            Systems
                         </option>
                         <option value="commercialization">
-                            commercialization
+                            Commercialization
                         </option>
                     </select>   
                     <label for="message">
-                        message
+                        Message
                     </label>
                     <textarea name="message" id="message" cols="30" rows="10">
                     </textarea>

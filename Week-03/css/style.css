@@ -18,28 +18,27 @@ h1{
     padding-bottom: 26px;
     padding-left: 247px;
     padding-right: 195px;
-    margin: 86px 350px 93px 476px;
+    margin: 2% 20%;
+    text-align: center;
 }
 .subtitle{
     color: #000000;
-
-    width: 439px;
-    height: 25px;
-
     font-style: italic;
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
-    margin: 0px 480px 0px 593px;
-
+    text-align: center;
 }
 .page1{
-    margin: 88px 139px 241px 486px;
+    margin: 5% 20%;
+    text-align: center;
 }
 #portrait{
     box-sizing: border-box;
     border: 4px solid rgba(39, 185, 194, 0.25);
     border-radius: 26px;
+    display: inline-block;
+    margin: 5%;
 }
 #portrait-text{
     width: 342px;
@@ -51,30 +50,17 @@ h1{
     line-height: 19px;
 
     color: #000000;
-
-    float: right;
     padding-top: 89px;
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+    margin: 5%;
 }
-.page2-header{
-    color: #FFFFFF;
-    background: #FF0000;
-
-    width: 186px;
-    height: 33px;
-
-    font-style: normal;
-    font-weight: 700;
-    font-size: 28px;
-    line-height: 33px;
-
-    padding: 20px 145px 19px 141px;
-    margin: 91px 464px 173.76px 576px;
-}
-
 .page2-list{
-    margin: 0px 109px 301.3px  430.73px 
+    margin-top: 0px;
+    margin-bottom: 302px;
+    text-align: center;
 }
-
 .func-logos{
     background: #FF0000;
     width: 140.06px;
@@ -98,7 +84,7 @@ h1{
     vertical-align: top;
 }
 
-.page3-header{
+.page-header{
     color: #FFFFFF;
     background: #FF0000;
 
@@ -107,7 +93,7 @@ h1{
     font-size: 28px;
     line-height: 33px;
 
-    margin: 0px 469px 190px 571px;
+    margin: 10% 20%;
     padding-top: 20px;
     padding-bottom: 19px;
 
@@ -124,7 +110,6 @@ h1{
 }
 
 .page3-title{
-
     font-style: normal;
     font-weight: 500;
     font-size: 24px;
@@ -149,7 +134,7 @@ h1{
     color: rgba(0, 0, 0, 0.6);
 }
 .page3-list{
-    margin: 193px 75px 171px  356px 
+    text-align: center;
 }
 .page3-blocktext{
     display: inline-block;
@@ -159,5 +144,39 @@ h1{
 
 .page3-item{
     display: inline-block;
-    margin-right: 111px; 
+    margin: 5%;
 }
+
+.page4-block{
+    width: 737px;
+    margin-top: 402px;
+    margin-bottom: 313px;
+    background: #E5E5E5;
+}
+.form-row{
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+    display: flex;
+    align-items: center;
+    margin: 5% 20%;
+    background: #E5E5E5;
+    color: #000000;
+}
+
+/*.page-header{
+    color: #FFFFFF;
+    background: #FF0000;
+
+    width: 186px;
+    height: 33px;
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 33px;
+
+    padding: 20px 145px 19px 141px;
+    margin: 91px 464px 173.76px 576px;
+}*/
+
