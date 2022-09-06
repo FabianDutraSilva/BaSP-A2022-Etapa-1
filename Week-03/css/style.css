@@ -211,7 +211,9 @@ h1{
     font-size: 14px;
     line-height: 16px;
     color: #747474;
-    padding: 1%
+    padding: 1%;
+    text-transform: capitalize;
+    margin: 5%;
 }
 .foot{
     text-align: center;
@@ -224,4 +226,49 @@ h1{
 }
 .footer-img{
     margin: 1% 5%;
+}
+.sidebar-home{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    color: #FFFFFF;
+    margin: 20% 0% 70% 0%;
+    text-transform: capitalize;
+}
+.sidebar-h3{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    color: #FFFFFF;
+    text-transform: capitalize;
+    margin: 20% 0%;
+}
+.sidebar{
+    background-color: #FF0000;
+    position:absolute;
+    vertical-align: top;
+    width: 277px;
+    height: 982px;
+    text-align: center;
+}
+.sidebar-h4{
+    width: 277px;
+    margin: 80% 0% 20% 0%;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    color: #FFFFFF;
+    text-transform: capitalize;
+}
+.sidebar-contacts{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+    margin: 20% 0% 20% 0%;
+    vertical-align: bottom;
 }
