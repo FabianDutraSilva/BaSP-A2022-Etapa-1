@@ -3,8 +3,7 @@ Become a Software Professional by Radium Rocket, is a bootcamp designed to acqui
 mobile and web products. This repository is part of my personal progress on this course, guided by 
 tutors and colaborating with students.
 ## Visualization
-This web page is now on Github Pages! Please [click here]
-(https://fabiandutrasilva.github.io/BaSP-A2022-Etapa-1/Week-04/index.html)
+This web page is now on Github Pages! Please [click here](https://fabiandutrasilva.github.io/BaSP-A2022-Etapa-1/Week-04/index.html)
 to be able to see the content.
 The full link is:
 ```bash
