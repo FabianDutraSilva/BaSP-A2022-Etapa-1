@@ -1,0 +1,125 @@
+body{
+    width: 100%;
+    height: 100%;
+}
+
+/*aside*/
+aside{
+    background: yellow;
+    border: 5px solid red;
+    display: flex;
+    justify-content: space-around;
+}
+
+.sidebar-midbox{
+    display: flex;
+}
+
+.sidebar-midbox h3{
+    margin: 0px 5px;
+}
+
+/*main*/
+main{
+    background: green;
+    border: 5px solid yellow;
+    align-content: center;
+}
+
+/*footer*/
+footer{
+    background: violet;
+    border: 5px solid orangered;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/*theme*/
+.theme{
+    background: rgb(233, 131, 201);
+    border: 5px solid turquoise;
+    display: flex;
+    flex-direction: column;
+}
+
+.theme-content{
+    display: flex;
+    flex-direction: column;
+    border: 5px solid orange;
+}
+
+.theme-content p{
+    background: skyblue;
+    border: 5px solid green;
+    flex: 1;
+    text-align: center;
+}
+
+.theme h2{
+    background: red;
+    border: 5px solid yellow;
+    align-self: center;
+}
+
+.theme h3{
+    background-color: chartreuse;
+    border: 5px solid blueviolet;
+}
+
+.theme-content-item{
+    display: flex;
+    background-color: brown;
+    border: 5px solid navy;
+}
+
+.theme-content-item p{
+    flex: 1;
+    text-align: center;
+}
+
+.theme-content-item h3{
+    flex: 4;
+}
+
+.theme-content-item-box{
+    background-color: white;
+    border: 5px solid black;
+}
+
+.history-content .theme-content-item-box{
+    background-color: white;
+    border: 5px solid black;
+    flex: 1;
+}
+
+.history-content{
+    display: flex;
+    flex-direction: column;
+    background-color: brown;
+    border: 5px solid navy;
+}
+
+.row{
+    display: flex;
+}
+
+.offer-content .theme-content-item{
+    display: flex;
+    background-color: brown;
+    border: 5px solid navy;
+    align-content: center;
+}
+
+.theme-content-item-boxlogo{
+    background-color: white;
+    border: 5px solid black;
+    flex: 1;
+}
+
+.theme-content-item-boxtext{
+    background-color: white;
+    border: 5px solid black;
+    flex: 5;
+}
+/*usar otra clase para history*/
