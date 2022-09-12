@@ -98,8 +98,6 @@ footer p{
 .theme-content-item{
     display: flex;
     margin: 2%;
-/*    background-color: brown;
-    border: 5px solid navy;*/
 }
 
 .theme-content-item p{
@@ -120,30 +118,55 @@ footer p{
 }
 
 .theme-content-item-box{
-    background-color: white;
-    border: 5px solid black;
+    margin: 2%;
 }
 
 .theme-content-item-box h3{
     font-weight: bold;
 }
 
-/*history*/
-#history p{
+/*information request*/
+#information-request .theme-content{
+    background: #E5E5E5;
+    margin: 2%;
+}
+
+fieldset{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+#submit-button{
+    background: #FF0000;
+    border: none;
     font-size: 12px;
+    color: #FFFFFF;
+    box-shadow: none;
+}
+
+/*history*/
+
+#history .theme-content{
+    backdrop-filter: blur(15px);
+    background-image: url("../assets/picture-clock.png");
+    background-size: cover;
+}
+
+#history .theme-content-item-box p{
+    background: rgba(0, 0, 0, 0.5);
+    color: #F8F8F8;
+    border-radius: 100 px;
+    font-size: 10px;
 }
 
 .history-content .theme-content-item-box{
-    background-color: white;
-    border: 5px solid black;
     flex: 1;
 }
 
 .history-content{
     display: flex;
     flex-direction: column;
-    background-color: brown;
-    border: 5px solid navy;
 }
 
 .row{
@@ -152,21 +175,14 @@ footer p{
 
 .offer-content .theme-content-item{
     display: flex;
-    /*
-    background-color: brown;
-    border: 5px solid navy;*/
     align-content: center;
 }
 
 .theme-content-item-boxlogo{
-    /* background-color: white;
-    border: 5px solid black; */
     flex: 1;
 }
 
 .theme-content-item-boxtext{
-    /* background-color: white;
-    border: 5px solid black; */
     flex: 5;
 }
 
@@ -183,6 +199,7 @@ footer p{
 #contact .logo{
     height: 1em;
     width: 1em;
+    margin: 0% 5%;
 }
 
 #contact .theme-content{
@@ -190,13 +207,12 @@ footer p{
     display: flex;
     flex-direction: column;
     margin: 5%;
-   /* border: 5px solid orange;*/
     align-items: center;
 }
 
 /*services*/
 #services .logo{
-    width: 100%;
+    width: 50%;
 }
 
 #services h3{
@@ -209,9 +225,10 @@ footer p{
     text-transform: capitalize;
     list-style: disc inside;
     padding: 2% 2%;
+    color: #747474;
+    font-weight: bold;
 
 }
-
 
 /*generic*/
 .italic{
