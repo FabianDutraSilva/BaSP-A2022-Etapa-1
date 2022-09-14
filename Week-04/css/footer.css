@@ -1,0 +1,22 @@
+/*footer*/
+footer{
+    background: red;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer .theme-content-item{
+    width: 100%;
+    justify-content: space-around;
+}
+
+footer .logo{
+    align-self: center;
+    max-width: 2em;
+}
+
+footer p{
+    margin: 1%;
+}
