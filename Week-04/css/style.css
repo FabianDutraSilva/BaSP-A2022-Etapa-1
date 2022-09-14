@@ -13,6 +13,7 @@ aside{
     padding: 2% 0%;
     width: 100%;
     font-size: 15px;
+    z-index: +1;
 }
 
 aside h2, aside h3{
@@ -67,7 +68,9 @@ footer p{
 /*images*/
 .images{
     margin: 0% 10%;
-}
+    max-width: 50%;
+    align-self: center;
+}   
 
 /*theme*/
 .theme h2{
@@ -75,7 +78,7 @@ footer p{
     text-align: center;
     color: white;
     padding: 2% 5%;
-    margin: 2% 0%;
+    margin: 10% 0%;
     font-weight: bold;
     font-size: 26px;
 }
@@ -134,7 +137,8 @@ footer p{
 fieldset{
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
+    font-weight: bold;
 }
 
 #submit-button{
@@ -186,12 +190,12 @@ fieldset{
     flex: 5;
 }
 
-/*why*/
-#why h3{
+/*why-theme-content*/
+#why .theme-content h3{
     text-transform: capitalize;
 }
 
-#why p{
+#why .theme-content p{
     text-align: left;
 }
 
@@ -230,7 +234,83 @@ fieldset{
 
 }
 
+#functionalities .row, #why .row{
+    flex-direction: column;
+}
+
 /*generic*/
 .italic{
     font-style: italic;
+}
+
+/*media queries*/
+@media(min-width: 1024px){
+
+    aside{
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        width: 20%;
+        position: fixed;
+        top: 0;
+        font-size: 30px;
+        align-items: center;
+    }
+
+    main{
+        margin-left: 20%;
+    }
+    
+    footer{
+        margin-left: 20%;   
+    }
+
+    #contact{
+        display: none
+    }
+
+    #functionalities .theme-content, #why .theme-content, .offer-content{
+        display: flex;
+        flex-direction: row;
+        align-self: center;
+    }
+
+    .theme h2{
+        width: 40%;
+        background: red;
+        text-align: center;
+        color: white;
+        padding: 2% 5%;
+        margin: 2% 0%;
+        font-weight: bold;
+        font-size: 30px;
+        align-self: center;
+
+    }
+    
+    #track h2{
+        border-radius: 60px;
+    }
+
+    fieldset{
+        align-items: center;
+    }
+
+    .sidebar-midbox{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .images{
+        max-width: 5000;
+    }
+
+}
+
+@media(max-width: 1024px){
+    aside{
+        position: fixed;
+        top: 0;
+    }
+
 }
