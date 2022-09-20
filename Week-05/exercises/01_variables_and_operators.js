@@ -1,6 +1,6 @@
 /*---EXERCISE 1---*/
 /*VARIABLES Y OPERADORES*/
-console.log('EXERCISE 1');
+console.log('---EXERCISE 1---');
 
 /*---a---*/
 /*Crear dos variables numéricas y utilizar el operador suma para 

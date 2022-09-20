@@ -1,6 +1,6 @@
 /*---EXERCISE 2---*/
 /*---STRINGS---*/
-console.log('EXERCISE 2');
+console.log('---EXERCISE 2---');
 
 /*---a---*/
 /* Crear una variable de tipo string con al menos 10 caracteres y convertir 
@@ -16,7 +16,7 @@ en una nueva variable (utilizar substring).*/
 var strB1, strB2;
 strB1 = 'Hey there! I am also a more than 10 character string';
 strB2 = strB1.substring(0,5);
-console.log('2.b. First 5 characters of "' + strB1 + '" are: ' + strB2);
+console.log('2.b. the first 5 characters of "' + strB1 + '" are: ' + strB2);
 
 /*---c---*/
 /* Crear una variable de tipo string con al menos 10 caracteres y generar
@@ -25,7 +25,7 @@ una nueva variable (utilizar substring).*/
 var  strC1, strC2;
 strC1 = 'qwertyaserty';
 strC2 = strC1.substring(strC1.length-3, strC1.length);
-console.log('2.c. Last 3 characters of "' + strC1 + '" are: ' + strC2);
+console.log('2.c. the last 3 characters of "' + strC1 + '" are: ' + strC2);
 
 /*d- Crear una variable de tipo string con al menos 10 caracteres y generar un nuevo string
 con la primera letra en mayúscula y las demás en minúscula. Guardar el resultado en una
@@ -41,7 +41,7 @@ Encontrar la posición del primer espacio en blanco y guardarla en una variable 
 var strE1, strE2;
 strE1 = 'The last step';
 strE2 = strE1.indexOf(' ',0);
-console.log('2.e. The first blank space in "' + strE1 + '" is in position: ' + strE2);
+console.log('2.e. the first blank space in "' + strE1 + '" is in position: ' + strE2);
 
 /*f- Crear una variable de tipo string con al menos 2 palabras largas 
 (10 caracteres y algún espacio entre medio). Utilizar los métodos de los ejercicios anteriores 
