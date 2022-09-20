@@ -17,5 +17,7 @@ Create plain html code.
 Use css to format web page, trying to achieve pixel perfect.
 ## Week-04
 Edit html and css files to turn it into a responsive design web.
+## Week-05
+Javascript exercises to practice basic concepts.
 ## Authors
 [Fabián Dutra](https://github.com/FabianDutraSilva)
