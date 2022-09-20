@@ -15,7 +15,7 @@ if (p>=0.5){
     console.log('4.a. the number "' + p + '" is greater than 0.5');
 }
 else{
-    alert('4.a. the number "' + p + '" is lower than 0.5');
+    alert('the number "' + p + '" is lower than 0.5');
     console.log('4.a. the number "' + p + '" is lower than 0.5');
 };
 
