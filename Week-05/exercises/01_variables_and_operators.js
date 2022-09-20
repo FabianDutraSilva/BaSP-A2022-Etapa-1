@@ -1,5 +1,6 @@
 /*---EXERCISE 1---*/
 /*VARIABLES Y OPERADORES*/
+
 console.log('---EXERCISE 1---');
 
 /*---a---*/
