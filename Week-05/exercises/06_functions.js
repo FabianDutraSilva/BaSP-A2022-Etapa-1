@@ -21,12 +21,12 @@ si alguno de los parámetros no es un número; de no ser un número, mostrar
 una alerta aclarando que uno de los parámetros tiene error y retornar el valor NaN como resultado.*/
 
 function sum(a,b){
-    if (typeof a != 'number' || typeof b != 'number'){
-        alert('One of the parameters is not a number');
-        return NaN;
+    if (typeof a == 'number' && typeof b == 'number'){
+        return a+b;
     }
     else{
-        return a+b;
+        alert('One of the parameters is not a number');
+        return NaN;
     }
 }
 
@@ -49,18 +49,18 @@ y que valide que los números sean enteros. En caso que haya decimales mostrar u
 alerta con el error y retornar el número convertido a entero (redondeado).*/
 
 function sum(a,b){
-    if (typeof a != 'number' || typeof b != 'number'){
-        alert('One of the parameters is not a number');
-        return NaN;
-    }
-    else{
-        if (validateInteger(a) != true ||  validateInteger(b) != true){
+    if (typeof a == 'number' && typeof b == 'number'){
+        if (validateInteger(a) == true && validateInteger(b) == true){
+            return a+b;
+        }
+        else{
             alert('The result is a decimal number, and it is going to be truncated');
             return Math.trunc(a+b);
         }
-        else{
-            return a+b;
-        }
+    }
+    else{
+        alert('One of the parameters is not a number');
+        return NaN;
     }
 }
 
@@ -73,22 +73,22 @@ console.log('6.d.iii. sum(1,1.5) returns:', sum(1,1.5));
 dentro de la función suma probando que todo siga funcionando igual.*/
 
 function isOkToSum(isOk1,isOk2){
-    if (validateInteger(isOk1) != true || validateInteger(isOk2) != true){
-        alert('The result is a decimal number, and it is going to be truncated');
-        return Math.trunc(isOk1+isOk2);
+    if (validateInteger(isOk1) == true && validateInteger(isOk2) == true){
+        return isOk1 + isOk2;
     }
     else{
-        return isOk1 + isOk2;
+        alert('The result is a decimal number, and it is going to be truncated');
+        return Math.trunc(isOk1+isOk2);
     }
 }
 
 function sum(a,b){
-    if (typeof a != 'number' || typeof b != 'number'){
-        alert('One of the parameters is not a number');
-        return NaN;
+    if (typeof a == 'number' && typeof b == 'number'){
+        return isOkToSum(a,b);
     }
     else{
-        return isOkToSum(a,b);
+        alert('One of the parameters is not a number');
+        return NaN;
     }
 }
 
