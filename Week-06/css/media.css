@@ -1,0 +1,78 @@
+/*media desktop*/
+@media(min-width: 1024px){
+    #aside-mobile-tablet{
+        display: none;
+    }
+    aside{
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        width: 20%;
+        position: fixed;
+        top: 0;
+        font-size: 20px;
+        align-items: center;
+    }
+
+    main{
+        margin-left: 20%;
+    }
+
+    footer{
+        margin-left: 20%;
+    }
+
+    #contact{
+        display: none
+    }
+
+    #functionalities .theme-content, #why .theme-content, .offer-content{
+        display: flex;
+        flex-direction: row;
+        align-self: center;
+    }
+
+    .theme h2{
+        width: 40%;
+        background: red;
+        text-align: center;
+        color: white;
+        padding: 2% 5%;
+        margin: 2% 0%;
+        font-weight: bold;
+        font-size: 30px;
+        align-self: center;
+
+    }
+
+    #track h2{
+        border-radius: 60px;
+    }
+
+    fieldset{
+        align-items: center;
+    }
+
+    .sidebar-midbox{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .images{
+        max-width: 5000;
+    }
+
+}
+
+/*media mobile*/
+@media(max-width: 1024px){
+    aside{
+        position: fixed;
+        top: 0;
+        justify-content: left;
+        padding-left: 2%;
+    }
+    #aside-desktop{
+        display: none;
+    }
+}

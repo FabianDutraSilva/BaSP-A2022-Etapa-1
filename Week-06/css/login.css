@@ -1,0 +1,22 @@
+/* login */
+.login-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.row p{
+    margin: 1%;
+}
+
+.green-border{
+    border: 2px solid green;
+}
+
+.red-border{
+    border: 2px solid red;
+}
+
+input{
+    outline: none;
+}

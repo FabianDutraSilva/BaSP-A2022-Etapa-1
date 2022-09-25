@@ -1,0 +1,179 @@
+/*main*/
+main{
+    align-content: center;
+    margin: 2% 0%;
+}
+
+/*theme*/
+.theme{
+    background: white;
+    display: flex;
+    flex-direction: column;
+}
+
+/*images*/
+.images{
+    margin: 0% 10%;
+    max-width: 50%;
+    align-self: center;
+}   
+
+/*theme*/
+.theme h2{
+    background: red;
+    text-align: center;
+    color: white;
+    padding: 2% 5%;
+    margin: 10% 0%;
+    font-weight: bold;
+    font-size: 26px;
+}
+
+/*theme-content*/
+
+.theme-content{
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+}
+
+.theme-content p{
+    flex: 1;
+    text-align: center;
+    padding: 2%;
+    font-size: 12px;
+}
+
+.theme-content-item{
+    display: flex;
+    margin: 2%;
+}
+
+.theme-content-item p{
+    flex: 1;
+}
+
+.theme-content-item .logo{
+    width: 15%;
+    align-self: flex-start;
+}
+
+.theme-content-item h3{
+    flex: 4;
+    margin: 0% 2%;
+    font-weight: bold;
+    align-self: center;
+    font-size: 22px;
+}
+
+.theme-content-item-box{
+    margin: 2%;
+}
+
+.theme-content-item-box h3{
+    font-weight: bold;
+}
+
+/*information request*/
+#information-request .theme-content{
+    background: #E5E5E5;
+    margin: 2%;
+}
+
+fieldset{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+}
+
+#submit-button{
+    background: #FF0000;
+    border: none;
+    font-size: 12px;
+    color: #FFFFFF;
+    box-shadow: none;
+}
+
+/*history*/
+#history .theme-content{
+    backdrop-filter: blur(15px);
+    background-image: url("../assets/picture-clock.png");
+    background-size: cover;
+}
+
+#history .theme-content-item-box p{
+    background: rgba(0, 0, 0, 0.5);
+    color: #F8F8F8;
+    border-radius: 100 px;
+    font-size: 10px;
+}
+
+.history-content .theme-content-item-box{
+    flex: 1;
+}
+
+.row{
+    display: flex;
+}
+
+.offer-content .theme-content-item{
+    display: flex;
+    align-content: center;
+}
+
+.theme-content-item-boxlogo{
+    flex: 1;
+}
+
+.theme-content-item-boxtext{
+    flex: 5;
+}
+
+/*why-theme-content*/
+#why .theme-content h3{
+    text-transform: capitalize;
+}
+
+#why .theme-content p{
+    text-align: left;
+}
+
+/*contact*/
+#contact .logo{
+    height: 1em;
+    width: 1em;
+    margin: 0% 5%;
+}
+
+#contact .theme-content{
+    background-color: #FF5454;;
+    display: flex;
+    flex-direction: column;
+    margin: 5%;
+    align-items: center;
+}
+
+/*services*/
+#services .logo{
+    width: 50%;
+}
+
+#services h3{
+    text-transform: uppercase;
+    color: red;
+    font-weight: bold;
+}
+
+#services li{
+    text-transform: capitalize;
+    list-style: disc inside;
+    padding: 2% 2%;
+    color: #747474;
+    font-weight: bold;
+
+}
+
+#functionalities .row, #why .row{
+    flex-direction: column;
+}
