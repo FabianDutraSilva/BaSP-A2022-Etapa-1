@@ -22,10 +22,10 @@ function userValidation(){
     var userErrorMsg = document.getElementById('user-error-msg');
     var userRegEx = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
 
-        if (!userRegEx.test(user.value)){
+        if (!userRegEx.test(user.value) && user.value != 0 ){
             userErrorMsg.innerText = 'Invalid email format';
         }
-        if (user.value.length == 0){
+        else if (user.value.length == 0){
             userClearError();
         }
 }
@@ -33,35 +33,31 @@ function userValidation(){
 function passwordValidation(){
     var password = document.getElementById('password');
     var passwordErrorMsg = document.getElementById('password-error-msg');
-    var i;
 
-        if (password.value.length < 8 && password.value.length > 0){
-            passwordErrorMsg.innerText = 'Password must be at least 8 characters long';
-            return false;
-        }
-        else if (password.value.length == 0){
-            passwordClearError();
-            return false;
-        }
-        else if (password.value.length >= 8){
-            if (password.value.indexOf(' ') != -1){
-                passwordErrorMsg.innerText = 'Password can not contain a blank space';
-                return false;
-            }
+    if (password.value.length < 8 && password.value.length > 0){
+        passwordErrorMsg.innerText = 'Password must be at least 8 characters long';
+    }
+    else if (password.value.length == 0){
+        passwordClearError();
+    }
+    else if (password.value.length >= 8){
+        if (password.value.indexOf(' ') != -1){
+            passwordErrorMsg.innerText = 'Password can not contain a blank space';
         }
         else{
-            return true;
+            if (!hasNumbersAndLetters(password.value)){
+                passwordErrorMsg.innerText = 'Password must contain letters and numbers';
+            }
         }
+    }
 }
 
 function userClearError(){
-    var userErrorMsg = document.getElementById('user-error-msg');
-    userErrorMsg.innerHTML = '';
+    document.getElementById('user-error-msg').innerHTML = '';
 }
 
 function passwordClearError(){
-    var passwordErrorMsg = document.getElementById('password-error-msg');
-    passwordErrorMsg.innerHTML = '';
+    document.getElementById('password-error-msg').innerHTML = '';
 }
 
 function login(e){ //needs to be finished
@@ -69,4 +65,21 @@ function login(e){ //needs to be finished
     var userAlert = document.getElementById('user-name').value;
     var passwordAlert = document.getElementById('password').value;
     alert('User: ' + userAlert + ' Pass: ' + passwordAlert);
+}
+
+function hasNumbersAndLetters(password){
+    var passwordLow = password.toLowerCase();
+    var i = 0;
+    var number = false;
+    var letter = false;
+    while(i < passwordLow.length && !letter && !number) {
+        if (Number(passwordLow[i]) != NaN){
+            number = true;
+        }
+        else if (charCodeAt(passwordLow) >= 97 && charCodeAt(passwordLow) <= 122){
+            letter = true;
+        }
+        i++;
+    }
+    return number && letter;
 }
