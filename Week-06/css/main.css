@@ -87,7 +87,7 @@ fieldset{
     font-weight: bold;
 }
 
-#submit-button{
+.confirm-button{
     background: #FF0000;
     border: none;
     font-size: 12px;

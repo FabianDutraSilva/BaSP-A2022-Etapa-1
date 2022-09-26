@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/body.css">
+    <link rel="stylesheet" type="text/css" href="../css/aside.css">
+    <link rel="stylesheet" type="text/css" href="../css/footer.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/media.css">
+    <link rel="stylesheet" type="text/css" href="../css/login.css">
+    <script src="../javascript/login.js"></script>
+    <title>Login Trackgenix</title>
+</head>
+<body>
+    <main>
+        <section class="theme">
+            <h2>
+                <a href="index.html">
+                Trackgenix
+                </a>
+            </h2>
+            <div class="form-div">
+                <h3 id="login-h3">
+                    Log In
+                </h3>
+                <form action="log-in" id="form-log-in">
+                    <fieldset class="login-form">
+                        <div class="row">
+                            <img src="./../assets/user-log-in.png" alt="user-log-in-logo">
+                            <input class="login-input" type="text" name="username" placeholder="Username" id="user-name">
+                        </div>
+                        <div class="error-msg">
+                            <p id="user-error-msg">
+                            </p>
+                        </div>
+                        <div class="row">
+                            <img src="./../assets/lock-log-in.png" alt="user-log-in-logo">
+                            <input type="password" name="pass" placeholder="Password" id="password">
+                        </div>
+                        <div class="error-msg">
+                            <p id="password-error-msg">
+                            </p>
+                        </div>
+                        <div class="row">
+                            <input type="checkbox" id="remember-pass" name="remember" value="true">
+                            <label for="remember">
+                                Remember me
+                            </label>
+                        </div>
+                        <div class="row" id="register-forgot" >
+                            <p>
+                                Register here
+                            </p>
+                            <p>
+                                Forgot your password?
+                            </p>
+                        </div>
+                        <div class="row">
+                            <input type="submit" name="confirm" value="Confirm" id="login-button" class="confirm-button">
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

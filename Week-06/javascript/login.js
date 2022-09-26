@@ -1,39 +1,72 @@
-window.onload = function () {
+window.onload = function(){
 
-    //EMAIL REGEX//
-    var emailExpression = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
+    //VAR
+    var user = document.getElementById('user-name');
+    var password = document.getElementById('password');
+    var loginButton = document.getElementById('login-button');
 
-    //EMAIL VALIDATION - BLUR//
-    var userName = document.getElementById('userName');
-    userName.onblur = function (){
-        if (emailExpression.test(userName.value)){
-            userName.classList.add('green-border');
+    //BLUR
+    user.addEventListener('blur', userValidation);
+    password.addEventListener('blur', passwordValidation);
+
+    //FOCUS
+    user.addEventListener('focus', userClearError);
+    password.addEventListener('focus', passwordClearError);
+
+    //CLICK
+    loginButton.addEventListener('click', login);
+}
+
+function userValidation(){
+    var user = document.getElementById('user-name');
+    var userErrorMsg = document.getElementById('user-error-msg');
+    var userRegEx = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
+
+        if (!userRegEx.test(user.value)){
+            userErrorMsg.innerText = 'Invalid email format';
+        }
+        if (user.value.length == 0){
+            userClearError();
+        }
+}
+
+function passwordValidation(){
+    var password = document.getElementById('password');
+    var passwordErrorMsg = document.getElementById('password-error-msg');
+    var i;
+
+        if (password.value.length < 8 && password.value.length > 0){
+            passwordErrorMsg.innerText = 'Password must be at least 8 characters long';
+            return false;
+        }
+        else if (password.value.length == 0){
+            passwordClearError();
+            return false;
+        }
+        else if (password.value.length >= 8){
+            if (password.value.indexOf(' ') != -1){
+                passwordErrorMsg.innerText = 'Password can not contain a blank space';
+                return false;
+            }
         }
         else{
-            userName.classList.add('red-border');
+            return true;
         }
-    }
+}
 
-    //PASSWORD VALIDATION - BLUR//
-    var password = document.getElementById('password');
+function userClearError(){
+    var userErrorMsg = document.getElementById('user-error-msg');
+    userErrorMsg.innerHTML = '';
+}
 
-    //ONFOCUS//
-    userName.onfocus = function (){
-        userName.classList.remove('green-border', 'red-border');
-    }
+function passwordClearError(){
+    var passwordErrorMsg = document.getElementById('password-error-msg');
+    passwordErrorMsg.innerHTML = '';
+}
 
-    //CLICK BUTTON//
-    var loginButton = document.getElementById('login-button');
-    loginButton.onclick = function(e){
-        e.preventDefault();
-        alert('User: ' + userName.value + ' Pass: ' + password.value);
-    }
-    //email error msg//
-    //var emailErrorMsg = document.createTextNode('Invalid email format! Please try again.');
-    //var emailErrorDiv = document.createElement('div');
-    //emailErrorDiv.appendChild(emailErrorMsg);
-
-    //QUERYSELECTOR//
-    //var container = document.querySelector('fieldset .login-input');
-    //var loginInput = document.querySelector('fieldset input');
+function login(e){ //needs to be finished
+    e.preventDefault();
+    var userAlert = document.getElementById('user-name').value;
+    var passwordAlert = document.getElementById('password').value;
+    alert('User: ' + userAlert + ' Pass: ' + passwordAlert);
 }

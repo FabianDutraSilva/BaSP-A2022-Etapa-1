@@ -2,7 +2,7 @@
 .login-form{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
 }
 
 .row p{
@@ -17,6 +17,46 @@
     border: 2px solid red;
 }
 
+.hide{
+    display: none;
+}
+
 input{
     outline: none;
 }
+
+/*login-form*/
+.form-div{
+    box-shadow: 10px 10px 10px 10px lightgrey;
+    height: 80%;
+    width: 60%;
+    padding: 10%;
+    align-self: center;
+}
+
+.form-div .row{
+    margin: 1% 0%;
+}
+
+.form-div h3{
+    margin: 5%;
+    font-size: 20px;
+    text-align: center;
+}
+
+#register-forgot{
+    justify-content: space-between;
+}
+
+#register-forgot p{
+    flex:1;
+}
+
+
+/*error msgs*/
+.error-msg{
+    height: 1vh;
+    margin: 1%;
+}
+
+/*user-name*/
