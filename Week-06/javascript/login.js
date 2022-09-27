@@ -28,6 +28,9 @@ function userValidation(){
         else if (user.value.length == 0){
             userClearError();
         }
+        else{
+            return true;
+        }
 }
 
 function passwordValidation(){
@@ -36,20 +39,25 @@ function passwordValidation(){
 
     if (password.value.length < 8 && password.value.length > 0){
         passwordErrorMsg.innerText = 'Password must be at least 8 characters long';
+        return false;
     }
     else if (password.value.length == 0){
         passwordClearError();
+        return false;
     }
-    else if (password.value.length >= 8){
+    else {
         if (password.value.indexOf(' ') != -1){
             passwordErrorMsg.innerText = 'Password can not contain a blank space';
+            return false;
         }
         else{
             if (!hasNumbersAndLetters(password.value)){
                 passwordErrorMsg.innerText = 'Password must contain letters and numbers';
+                return false;
             }
         }
     }
+    return true;
 }
 
 function userClearError(){
@@ -61,10 +69,18 @@ function passwordClearError(){
 }
 
 function login(e){ //needs to be finished
-    e.preventDefault();
-    var userAlert = document.getElementById('user-name').value;
-    var passwordAlert = document.getElementById('password').value;
-    alert('User: ' + userAlert + ' Pass: ' + passwordAlert);
+    if (!userValidation()){
+        alert('Invalid User! Please try again');
+    }
+    else if (!passwordValidation()){
+        alert('Invalid Password! Please try again');
+    }
+    else{
+        e.preventDefault();
+        var userAlert = document.getElementById('user-name').value;
+        var passwordAlert = document.getElementById('password').value;
+        alert('User: ' + userAlert + ' Pass: ' + passwordAlert);
+    }
 }
 
 function hasNumbersAndLetters(password){
@@ -72,11 +88,17 @@ function hasNumbersAndLetters(password){
     var i = 0;
     var number = false;
     var letter = false;
-    while(i < passwordLow.length && !letter && !number) {
-        if (Number(passwordLow[i]) != NaN){
+    console.log(passwordLow);
+    console.log(passwordLow.length);
+    console.log(passwordLow.charCodeAt(0));
+    console.log(passwordLow.charCodeAt(1));
+    console.log(passwordLow.charCodeAt(2));
+    console.log(passwordLow.charCodeAt(3));
+    while (i < passwordLow.length && !(letter && number)) {
+        if (passwordLow.charCodeAt(i) >= 48 && passwordLow.charCodeAt(i) <= 57){
             number = true;
         }
-        else if (charCodeAt(passwordLow) >= 97 && charCodeAt(passwordLow) <= 122){
+        else if (passwordLow.charCodeAt(i) >= 97 && passwordLow.charCodeAt(i) <= 122){
             letter = true;
         }
         i++;
