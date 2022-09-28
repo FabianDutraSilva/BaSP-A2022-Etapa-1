@@ -1,3 +1,7 @@
+////////////////
+/****LOGIN ****/
+////////////////
+
 window.onload = function(){
 
     //VAR
@@ -68,7 +72,7 @@ function passwordClearError(){
     document.getElementById('password-error-msg').innerHTML = '';
 }
 
-function login(e){ //needs to be finished
+function login(e){
     if (!userValidation()){
         alert('Invalid User! Please try again');
     }
@@ -88,12 +92,6 @@ function hasNumbersAndLetters(password){
     var i = 0;
     var number = false;
     var letter = false;
-    console.log(passwordLow);
-    console.log(passwordLow.length);
-    console.log(passwordLow.charCodeAt(0));
-    console.log(passwordLow.charCodeAt(1));
-    console.log(passwordLow.charCodeAt(2));
-    console.log(passwordLow.charCodeAt(3));
     while (i < passwordLow.length && !(letter && number)) {
         if (passwordLow.charCodeAt(i) >= 48 && passwordLow.charCodeAt(i) <= 57){
             number = true;

@@ -15,58 +15,95 @@
     <title>Login Trackgenix</title>
 </head>
 <body>
+    <aside id="aside-mobile-tablet">
+        <img src="../assets/shape.png" alt="nav-button">
+    </aside>
+    <aside id="aside-desktop">
+        <div>
+            <div>
+                <h2>
+                    <a href="index.html">Home</a>
+                </h2>
+            </div>
+        </div>
+        <div class="sidebar-midbox">
+            <h3>
+                <a href="signup.html">Sign Up</a>
+            </h3>
+            <h3>
+                <a href="login.html">Log In</a>
+            </h3>
+        </div>
+        <div>
+            <h3>Contact</h3>
+        </div>
+    </aside>
     <main>
-        <section class="theme">
+        <section class="theme" id="login">
             <h2>
-                <a href="index.html">
                 Trackgenix
-                </a>
             </h2>
-            <div class="form-div">
-                <h3 id="login-h3">
-                    Log In
-                </h3>
-                <form action="log-in" id="form-log-in">
-                    <fieldset class="login-form">
-                        <div class="row">
-                            <img src="./../assets/user-log-in.png" alt="user-log-in-logo">
-                            <input class="login-input" type="text" name="username" placeholder="Username" id="user-name">
-                        </div>
-                        <div class="error-msg">
-                            <p id="user-error-msg">
-                            </p>
-                        </div>
-                        <div class="row">
-                            <img src="./../assets/lock-log-in.png" alt="user-log-in-logo">
-                            <input type="password" name="pass" placeholder="Password" id="password">
-                        </div>
-                        <div class="error-msg">
-                            <p id="password-error-msg">
-                            </p>
-                        </div>
-                        <div class="row">
-                            <input type="checkbox" id="remember-pass" name="remember" value="true">
-                            <label for="remember">
-                                Remember me
-                            </label>
-                        </div>
-                        <div class="row" id="register-forgot" >
-                            <p>
-                                Register here
-                            </p>
-                            <p>
-                                Forgot your password?
-                            </p>
-                        </div>
-                        <div class="row">
-                            <button type="button" name="confirm" id="login-button" class="confirm-button">
-                                Login
-                            </button>
-                        </div>
-                    </fieldset>
-                </form>
+            <div class="theme-content">
+                <div class="form-div">
+                    <h3 id="login-h3">
+                        Log In
+                    </h3>
+                    <form action="log-in" class="login-form" id="form-log-in">
+                        <fieldset>
+                            <div class="row">
+                                <img src="./../assets/user-log-in.png" alt="user-log-in-logo">
+                                <input class="login-input" type="text" name="username" placeholder="Username" id="user-name">
+                            </div>
+                            <div class="error-msg">
+                                <p id="user-error-msg">
+                                </p>
+                            </div>
+                            <div class="row">
+                                <img src="./../assets/lock-log-in.png" alt="user-log-in-logo">
+                                <input type="password" name="pass" placeholder="Password" id="password">
+                            </div>
+                            <div class="error-msg">
+                                <p id="password-error-msg">
+                                </p>
+                            </div>
+                            <div class="row">
+                                <input type="checkbox" id="remember-pass" name="remember" value="true">
+                                <label for="remember">
+                                    Remember me
+                                </label>
+                            </div>
+                            <div class="row" id="register-forgot" >
+                                <p>
+                                    Register here
+                                </p>
+                                <p>
+                                    Forgot your password?
+                                </p>
+                            </div>
+                            <div class="row">
+                                <button type="button" name="confirm" id="login-button" class="confirm-button">
+                                    Login
+                                </button>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
             </div>
         </section>
     </main>
+    <footer>
+        <div class="theme-content-item">
+            <img src="../assets/facebook.svg" alt="facebook-logo" class="logo">
+            <img src="../assets/twitter.svg" alt="twitter-logo" class="logo">
+            <img src="../assets/linkedin.svg" alt="linkedin-logo" class="logo">
+            <img src="../assets/instagram.svg" alt="instagram-logo" class="logo">
+        </div>
+        <p>
+            Rosario, Argentina
+        </p>
+        <p>
+            Copyright &copy; 2022 Radium Rocket. All rights reserved
+        </p>
+    </footer>
 </body>
 </html>

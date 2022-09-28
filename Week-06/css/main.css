@@ -16,7 +16,7 @@ main{
     margin: 0% 10%;
     max-width: 50%;
     align-self: center;
-}   
+}
 
 /*theme*/
 .theme h2{
@@ -117,6 +117,10 @@ fieldset{
     display: flex;
 }
 
+.row p{
+    margin: 1%;
+}
+
 .offer-content .theme-content-item{
     display: flex;
     align-content: center;
@@ -176,4 +180,34 @@ fieldset{
 
 #functionalities .row, #why .row{
     flex-direction: column;
+}
+
+/*login-setup-form*/
+.form-div{
+    box-shadow: 10px 10px 10px 10px lightgrey;
+    padding: 10%;
+    align-self: center;
+}
+
+.form-div .row{
+    margin: 1% 0%;
+}
+
+.form-div h3{
+    margin: 5%;
+    font-size: 25px;
+    text-align: center;
+}
+
+.form-div p, .form-div label{
+    font-weight: normal;
+}
+
+/*signup*/
+#form-signup h4{
+    font-weight: 400;
+}
+
+.row input{
+    margin: 2%;
 }
