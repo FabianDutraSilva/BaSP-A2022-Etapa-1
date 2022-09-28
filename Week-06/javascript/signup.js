@@ -72,7 +72,7 @@ function firstNameValidation(){
     }
 }
 
-//LAST NAME// can be adapted to a unique function called for first and last
+//LAST NAME//
 function lastNameValidation(){
     var lastName = document.getElementById('last-name').value;
     lastName = lastName.replaceAll(' ', '');
