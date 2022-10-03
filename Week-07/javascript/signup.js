@@ -1,10 +1,5 @@
-////////////////
-/****SIGNUP ****/
-////////////////
-
 window.onload = function(){
 
-    //VAR
     var firstName = document.getElementById('first-name');
     var lastName = document.getElementById('last-name');
     var dni = document.getElementById('dni');
@@ -18,7 +13,6 @@ window.onload = function(){
     var passwordRepeat = document.getElementById('password-repeat');
     var signupButton = document.getElementById('signup-button');
 
-    //BLUR
     firstName.addEventListener('blur', firstNameValidation);
     lastName.addEventListener('blur', lastNameValidation);
     dni.addEventListener('blur', dniValidation);
@@ -31,7 +25,6 @@ window.onload = function(){
     password.addEventListener('blur', passwordValidation);
     passwordRepeat.addEventListener('blur', passwordRepeatValidation);
 
-    //FOCUS
     firstName.addEventListener('focus', firstNameClearError);
     lastName.addEventListener('focus', lastNameClearError);
     dni.addEventListener('focus', dniClearError);
@@ -44,26 +37,24 @@ window.onload = function(){
     password.addEventListener('focus', passwordClearError);
     passwordRepeat.addEventListener('focus', passwordRepeatClearError);
 
-    //CLICK
     signupButton.addEventListener('click', signup);
 }
 
-//FIRST NAME//
 function firstNameValidation(){
     var firstName = document.getElementById('first-name').value;
     firstName = firstName.replaceAll(' ', '');
     var firstNameErrorMsg = document.getElementById('first-name-error-msg');
 
-    if (firstName.length == 0) {
+    if (firstName.length === 0) {
         firstNameClearError();
         return false;
     }
-    else if (firstName.length < 2) {
-        firstNameErrorMsg.innerText= 'Name must be at least two characters long';
+    else if (firstName.length < 1) {
+        firstNameErrorMsg.innerText= 'First name must be at least two characters long';
         return false;
     }
     else if (!onlyLetters(firstName)){
-        firstNameErrorMsg.innerText= 'Name must contain only letters';
+        firstNameErrorMsg.innerText= 'First name must contain only letters';
         return false;
     }
     else {
@@ -72,22 +63,21 @@ function firstNameValidation(){
     }
 }
 
-//LAST NAME//
 function lastNameValidation(){
     var lastName = document.getElementById('last-name').value;
     lastName = lastName.replaceAll(' ', '');
     var lastNameErrorMsg = document.getElementById('last-name-error-msg');
 
-    if (lastName.length == 0) {
+    if (lastName.length === 0) {
         lastNameClearError();
         return false;
     }
-    else if (lastName.length < 2) {
-        lastNameErrorMsg.innerText= 'Name must be at least two characters long';
+    else if (lastName.length < 1) {
+        lastNameErrorMsg.innerText= 'N¿Last name must be at least two characters long';
         return false;
     }
     else if (!onlyLetters(lastName)){
-        lastNameErrorMsg.innerText= 'Name may contain only letters';
+        lastNameErrorMsg.innerText= 'Last name may contain only letters';
         return false;
     }
     else {
@@ -96,12 +86,11 @@ function lastNameValidation(){
     }
 }
 
-//DNI//
 function dniValidation(){
     var dni = document.getElementById('dni').value;
     var dniErrorMsg = document.getElementById('dni-error-msg');
 
-    if (dni.length == 0){
+    if (dni.length === 0){
         dniClearError();
         return false;
     }
@@ -119,7 +108,6 @@ function dniValidation(){
     }
 }
 
-//TELEPHONE//
 function telephoneValidation(){
     var telephone = document.getElementById('telephone').value;
     var telephoneErrorMsg = document.getElementById('telephone-error-msg');
@@ -142,13 +130,12 @@ function telephoneValidation(){
     }
 }
 
-//ADDRESS//
 function addressValidation(){
     var address = document.getElementById('address').value;
     var addressErrorMsg = document.getElementById('address-error-msg');
     var splittedAddress = address.split(' ');
 
-    if (address.length == 0){
+    if (address.length === 0){
         addressClearError();
         return false;
     }
@@ -174,45 +161,32 @@ function addressValidation(){
     }
 }
 
-//BIRTH DATE//
 function birthDateValidation(){
     var birthDate = document.getElementById('birth-date').value;
     var birthDateErrorMsg = document.getElementById('birth-date-error-msg');
-    var separateBirthDate = birthDate.split('/');
+    var separateBirthDate = birthDate.split('-');
 
-    if (birthDate.length == 0){
+    if (birthDate.length === 0){
         birthDateClearError();
         return false;
     }
-    else if (separateBirthDate.length != 3){
-        birthDateErrorMsg.innerText= 'Invalid format! Birth date must be: dd/mm/yyyy';
-        return false
-    }
     else{
-        var dayBirthDate = separateBirthDate[0];
+        var yearBirthDate = separateBirthDate[0];
         var monthBirthDate = separateBirthDate[1];
-        var yearBirthDate = separateBirthDate[2];
+        var dayBirthDate = separateBirthDate[2];
 
-        if (isNaN(dayBirthDate) || isNaN(monthBirthDate) || isNaN(yearBirthDate)){
-            birthDateErrorMsg.innerText= 'Invalid characters! Birth date must be: dd/mm/yyyy';
-            return false
+        if (yearBirthDate > 2022){
+            birthDateErrorMsg.innerText= 'Invalid date! Date is out of range';
+            return false;
         }
-        else {
-            if (dayBirthDate.length != 2 || monthBirthDate.length != 2 || yearBirthDate.length !=4){
-                birthDateErrorMsg.innerText= 'Invalid format! Birth date must be: dd/mm/yyyy';
-                return false;
-            }
-            else if (dayBirthDate > 31 || monthBirthDate > 12 || yearBirthDate > 2022){
-                birthDateErrorMsg.innerText= 'Invalid date! Date is out of range';
-                return false;
-            }
+        else{
             birthDateClearError();
             return true;
         }
+
     }
 }
 
-//REGION//
 function regionValidation(){
     var region = document.getElementById('region').value;
     if (region.length == 0){
@@ -233,10 +207,9 @@ function regionValidation(){
     }
 }
 
-//POSTAL CODE//
 function postalCodeValidation(){
     var postalCode = document.getElementById('postal-code').value;
-    if (postalCode.length == 0){
+    if (postalCode.length === 0){
         postalCodeClearError();
         return false;
     }
@@ -254,7 +227,6 @@ function postalCodeValidation(){
     }
 }
 
-//EMAIL//
 function emailValidation(){
     var email = document.getElementById('email').value;
     var emailRegEx = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
@@ -273,7 +245,6 @@ function emailValidation(){
     }
 }
 
-//PASSWORD//
 function passwordValidation(){
     var password = document.getElementById('password');
     var passwordErrorMsg = document.getElementById('password-error-msg');
@@ -282,7 +253,7 @@ function passwordValidation(){
         passwordErrorMsg.innerText = 'Password must be at least 8 characters long';
         return false;
     }
-    else if (password.value.length == 0){
+    else if (password.value.length === 0){
         passwordClearError();
         return false;
     }
@@ -301,7 +272,6 @@ function passwordValidation(){
     return true;
 }
 
-//REPEAT PASSWORD//
 function passwordRepeatValidation(){
     var passwordRepeat = document.getElementById('password-repeat');
     var passwordRepeatErrorMsg = document.getElementById('password-repeat-error-msg');
@@ -329,12 +299,10 @@ function passwordRepeatValidation(){
     return true;
 }
 
-//EQUAL PASSWORDS//
 function arePasswordsEqual(password,passwordRepeat){
-    return password == passwordRepeat;
+    return password === passwordRepeat;
 }
 
-//SUBMIT//
 function signup(e){
     var password = document.getElementById('password').value;
     var passwordRepeat = document.getElementById('password-repeat').value;
@@ -399,10 +367,21 @@ function signup(e){
         + ' | Email: ' + emailAlert
         + ' | Password: ' + passwordAlert
         + ' | Password repeat: ' + passwordRepeatAlert);
+
+        localStorage.setItem('firstName', firstNameAlert);
+        localStorage.setItem('lastName', lastNameAlert);
+        localStorage.setItem('dni', dniAlert);
+        localStorage.setItem('birthDateAlert', birthDateAlert);
+        localStorage.setItem('telephone', telephoneAlert);
+        localStorage.setItem('address', addressAlert);
+        localStorage.setItem('region', regionAlert);
+        localStorage.setItem('postalCode', postalCodeAlert);
+        localStorage.setItem('email', emailAlert);
+        localStorage.setItem('password', passwordAlert);
+        localStorage.setItem('passwordRepeat', passwordRepeatAlert);
     }
 }
 
-//CLEAR ERRORS//
 function firstNameClearError(){
     document.getElementById('first-name-error-msg').innerText = '';
 }
@@ -447,7 +426,7 @@ function passwordRepeatClearError(){
     document.getElementById('password-repeat-error-msg').innerText= '';
 }
 
-//AUX FUNCTIONS
+
 function onlyLetters(string){
     var stringLow = string.toLowerCase();
     var i = 0;
@@ -494,7 +473,7 @@ function isAlphanumeric(string){
     var stringLow = string.toLowerCase();
     var stringLowNoSpaces = stringLow.split(' ').join('');
 
-    if (stringLowNoSpaces.length == 0){
+    if (stringLowNoSpaces.length === 0){
         return false;
     }
     else {

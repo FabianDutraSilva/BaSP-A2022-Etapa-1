@@ -1,23 +1,15 @@
-////////////////
-/****LOGIN ****/
-////////////////
-
 window.onload = function(){
 
-    //VAR
     var user = document.getElementById('user-name');
     var password = document.getElementById('password');
     var loginButton = document.getElementById('login-button');
 
-    //BLUR
     user.addEventListener('blur', userValidation);
     password.addEventListener('blur', passwordValidation);
 
-    //FOCUS
     user.addEventListener('focus', userClearError);
     password.addEventListener('focus', passwordClearError);
 
-    //CLICK
     loginButton.addEventListener('click', login);
 }
 
@@ -29,7 +21,7 @@ function userValidation(){
         if (!userRegEx.test(user.value) && user.value != 0 ){
             userErrorMsg.innerText = 'Invalid email format';
         }
-        else if (user.value.length == 0){
+        else if (user.value.length === 0){
             userClearError();
         }
         else{
@@ -45,7 +37,7 @@ function passwordValidation(){
         passwordErrorMsg.innerText = 'Password must be at least 8 characters long';
         return false;
     }
-    else if (password.value.length == 0){
+    else if (password.value.length === 0){
         passwordClearError();
         return false;
     }
