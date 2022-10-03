@@ -4,8 +4,8 @@
 console.log('---EXERCISE 4---');
 
 /*---a---*/
-/*Crear un número aleatorio entre 0 y 1 utilizando la función Math.random(), 
-si el valor es mayor o igual que 0,5 mostrar una alerta con el mensaje “Greater 
+/*Crear un número aleatorio entre 0 y 1 utilizando la función Math.random(),
+si el valor es mayor o igual que 0,5 mostrar una alerta con el mensaje “Greater
 than 0,5” y sino un alerta con el mensaje “Lower than 0,5”.*/
 
 var p = Math.random();
@@ -30,7 +30,7 @@ else{
 "Elder"” entre 61 y 75 años;
 “Ancient” si es mayor a 75 años.*/
 
-var age = Math.random()*100;
+var age = Math.round(Math.random()*100);
 
 if (age < 2){
     alert('Baby');
