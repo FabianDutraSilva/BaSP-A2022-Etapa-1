@@ -1,0 +1,13 @@
+#register-forgot{
+    justify-content: space-between;
+}
+
+#register-forgot p{
+    flex:1;
+}
+
+/*error msgs*/
+.error-msg{
+    height: 40px;
+    margin: 1%;
+}
