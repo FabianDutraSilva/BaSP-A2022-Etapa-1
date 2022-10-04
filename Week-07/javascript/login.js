@@ -83,9 +83,10 @@ function login(e){
             return res.json();
         })
             .then(function (data){
-                console.log(data);
-                alert('Request was executed correctly!');
-                alert(data);
+                alert(data.msg);
+                if(!data.success){
+                    throw new Error('There was an error with the request');
+                }
             })
             .catch(function (error){
                 console.log(error);
