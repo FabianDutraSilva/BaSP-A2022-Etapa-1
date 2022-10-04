@@ -13,6 +13,18 @@ window.onload = function(){
     var passwordRepeat = document.getElementById('password-repeat');
     var signupButton = document.getElementById('signup-button');
 
+    firstName.value = localStorage.getItem('firstName');
+    lastName.value = localStorage.getItem('lastName');
+    dni.value = localStorage.getItem('dni');
+    birthDate.value = localStorage.getItem('birthDateAlert');
+    telephone.value = localStorage.getItem('telephone');
+    address.value = localStorage.getItem('address');
+    region.value = localStorage.getItem('region');
+    postalCode.value = localStorage.getItem('postalCode');
+    email.value = localStorage.getItem('email');
+    password.value = localStorage.getItem('password');
+    passwordRepeat.value = localStorage.getItem('passwordRepeat');
+
     firstName.addEventListener('blur', firstNameValidation);
     lastName.addEventListener('blur', lastNameValidation);
     dni.addEventListener('blur', dniValidation);
@@ -174,6 +186,7 @@ function birthDateValidation(){
         var yearBirthDate = separateBirthDate[0];
         var monthBirthDate = separateBirthDate[1];
         var dayBirthDate = separateBirthDate[2];
+        var dob = separateBirthDate[2]+'/'+separateBirthDate[1]+'/'+separateBirthDate[0];
 
         if (yearBirthDate > 2022){
             birthDateErrorMsg.innerText= 'Invalid date! Date is out of range';
@@ -183,7 +196,6 @@ function birthDateValidation(){
             birthDateClearError();
             return true;
         }
-
     }
 }
 
@@ -304,8 +316,13 @@ function arePasswordsEqual(password,passwordRepeat){
 }
 
 function signup(e){
+    var birthDate = document.getElementById('birth-date').value;
+    var separateBirthDate = birthDate.split('-');
+    var dob = separateBirthDate[1]+'/'+separateBirthDate[2]+'/'+separateBirthDate[0];
+
     var password = document.getElementById('password').value;
     var passwordRepeat = document.getElementById('password-repeat').value;
+
     if (!firstNameValidation()){
         alert('Invalid First Name! Please try again');
     }
@@ -355,6 +372,7 @@ function signup(e){
         var emailAlert = document.getElementById('email').value;
         var passwordAlert = document.getElementById('password').value;
         var passwordRepeatAlert = document.getElementById('password-repeat').value;
+
         alert(
         'First Name: ' + firstNameAlert
         + ' | Last Name: ' + lastNameAlert
@@ -368,17 +386,41 @@ function signup(e){
         + ' | Password: ' + passwordAlert
         + ' | Password repeat: ' + passwordRepeatAlert);
 
-        localStorage.setItem('firstName', firstNameAlert);
-        localStorage.setItem('lastName', lastNameAlert);
-        localStorage.setItem('dni', dniAlert);
-        localStorage.setItem('birthDateAlert', birthDateAlert);
-        localStorage.setItem('telephone', telephoneAlert);
-        localStorage.setItem('address', addressAlert);
-        localStorage.setItem('region', regionAlert);
-        localStorage.setItem('postalCode', postalCodeAlert);
-        localStorage.setItem('email', emailAlert);
-        localStorage.setItem('password', passwordAlert);
-        localStorage.setItem('passwordRepeat', passwordRepeatAlert);
+        var urlWithQP = 'https://basp-m2022-api-rest-server.herokuapp.com/signup?'+
+        'name='+firstNameAlert
+        +'&lastName='+lastNameAlert
+        +'&dni='+dniAlert
+        +'&dob='+dob
+        +'&phone='+telephoneAlert
+        +'&address='+addressAlert
+        +'&city='+regionAlert
+        +'&zip='+postalCodeAlert
+        +'&email='+emailAlert
+        +'&password='+passwordAlert
+
+        fetch(urlWithQP).then(function (res){
+            return res.json();
+        })
+            .then(function (data){
+                alert(data.msg);
+                if(!data.success){
+                    throw new Error('There was an error with the request');
+                }
+                localStorage.setItem('firstName', firstNameAlert);
+                localStorage.setItem('lastName', lastNameAlert);
+                localStorage.setItem('dni', dniAlert);
+                localStorage.setItem('birthDateAlert', birthDate);
+                localStorage.setItem('telephone', telephoneAlert);
+                localStorage.setItem('address', addressAlert);
+                localStorage.setItem('region', regionAlert);
+                localStorage.setItem('postalCode', postalCodeAlert);
+                localStorage.setItem('email', emailAlert);
+                localStorage.setItem('password', passwordAlert);
+                localStorage.setItem('passwordRepeat', passwordRepeatAlert);
+            })
+            .catch(function (error){
+                console.log(error);
+            })
     }
 }
 
