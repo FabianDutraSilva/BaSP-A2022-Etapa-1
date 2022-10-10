@@ -22,5 +22,10 @@ Edit html and css files to turn it into a responsive design web.
 Javascript exercises to practice basic concepts.
 ### Week-06
 Add login and sign up pages reusing css format, and use javascript to make form validations.
+### Week-07
+Login and SignUp httpRequest to an existent server.
+### Week-08
+Create a localhost with nodejs.
+
 ## Authors
 [Fabián Dutra](https://github.com/FabianDutraSilva)
