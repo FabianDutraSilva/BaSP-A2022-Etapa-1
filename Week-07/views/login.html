@@ -51,15 +51,16 @@
                     <form action="log-in" class="login-form" id="form-log-in">
                         <fieldset>
                             <div class="row">
-                                <img src="./../assets/user-log-in.png" alt="user-log-in-logo">
-                                <input class="login-input" type="text" name="username" placeholder="Username" id="user-name">
+                                <img src="./../assets/user-log-in.png" alt="user-log-in-logo" class="logo">
+                                <input class="login-input" type="text" name="username"
+                                placeholder="Username" id="user-name">
                             </div>
                             <div class="error-msg">
                                 <p id="user-error-msg">
                                 </p>
                             </div>
                             <div class="row">
-                                <img src="./../assets/lock-log-in.png" alt="user-log-in-logo">
+                                <img src="./../assets/lock-log-in.png" alt="user-log-in-logo" class="logo">
                                 <input type="password" name="pass" placeholder="Password" id="password">
                             </div>
                             <div class="error-msg">
@@ -69,7 +70,9 @@
                             <div class="row">
                                 <input type="checkbox" id="remember-pass" name="remember" value="true">
                                 <label for="remember">
-                                    Remember me
+                                    <p>
+                                        Remember me
+                                    </p>
                                 </label>
                             </div>
                             <div class="row" id="register-forgot" >

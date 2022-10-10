@@ -6,8 +6,23 @@
     flex:1;
 }
 
-/*error msgs*/
 .error-msg{
     height: 40px;
+    width: auto;
     margin: 1%;
+    color: red;
+}
+
+.green-border{
+    border: 2px solid green;
+}
+
+.red-border{
+    border: 2px solid red;
+}
+
+.logo{
+    height: 20px;
+    width: auto;
+    align-self: center;
 }

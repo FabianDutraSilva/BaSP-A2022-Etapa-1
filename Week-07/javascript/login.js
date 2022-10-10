@@ -1,14 +1,16 @@
 window.onload = function(){
 
     var user = document.getElementById('user-name');
+    var userErrorMsg = document.getElementById('user-error-msg');
     var password = document.getElementById('password');
+    var passwordErrorMsg = document.getElementById('password-error-msg');
     var loginButton = document.getElementById('login-button');
 
     user.addEventListener('blur', userValidation);
     password.addEventListener('blur', passwordValidation);
 
-    user.addEventListener('focus', userClearError);
-    password.addEventListener('focus', passwordClearError);
+    user.addEventListener('focus', function(){clearError(user, userErrorMsg); });
+    password.addEventListener('focus', function(){clearError(password, passwordErrorMsg)});
 
     loginButton.addEventListener('click', login);
 }
@@ -18,15 +20,18 @@ function userValidation(){
     var userErrorMsg = document.getElementById('user-error-msg');
     var userRegEx = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
 
-        if (!userRegEx.test(user.value) && user.value != 0 ){
-            userErrorMsg.innerText = 'Invalid email format';
-        }
-        else if (user.value.length === 0){
-            userClearError();
-        }
-        else{
-            return true;
-        }
+    if (!userRegEx.test(user.value) && user.value != 0 ){
+        redBorder(user);
+        userErrorMsg.innerText = 'Invalid email format';
+    }
+    else if (user.value.length === 0){
+        clearError(user, userErrorMsg);
+    }
+    else{
+        clearError(user, userErrorMsg);
+        greenBorder(user);
+        return true;
+    }
 }
 
 function passwordValidation(){
@@ -35,33 +40,28 @@ function passwordValidation(){
 
     if (password.value.length < 8 && password.value.length > 0){
         passwordErrorMsg.innerText = 'Password must be at least 8 characters long';
+        redBorder(password);
         return false;
     }
     else if (password.value.length === 0){
-        passwordClearError();
+        clearError(password, passwordErrorMsg);
         return false;
     }
-    else {
-        if (password.value.indexOf(' ') != -1){
-            passwordErrorMsg.innerText = 'Password can not contain a blank space';
-            return false;
-        }
-        else{
-            if (!hasNumbersAndLetters(password.value)){
-                passwordErrorMsg.innerText = 'Password must contain letters and numbers';
-                return false;
-            }
-        }
+    else if (password.value.indexOf(' ') != -1){
+        passwordErrorMsg.innerText = 'Password can not contain a blank space';
+        redBorder(password);
+        return false;
     }
-    return true;
-}
-
-function userClearError(){
-    document.getElementById('user-error-msg').innerHTML = '';
-}
-
-function passwordClearError(){
-    document.getElementById('password-error-msg').innerHTML = '';
+    else if (!hasNumbersAndLetters(password.value)){
+        passwordErrorMsg.innerText = 'Password must contain letters and numbers';
+        redBorder(password);
+        return false;
+    }
+    else{
+        clearError(password, passwordErrorMsg);
+        greenBorder(password);
+        return true;
+    }
 }
 
 function login(e){
@@ -77,7 +77,9 @@ function login(e){
         var passwordAlert = document.getElementById('password').value;
         alert('User: ' + userAlert + ' Pass: ' + passwordAlert);
 
-        var urlWithQP = 'https://basp-m2022-api-rest-server.herokuapp.com/login?email='+userAlert+'&password='+passwordAlert;
+        var urlWithQP = 'https://basp-m2022-api-rest-server.herokuapp.com/login?email='
+        +userAlert
+        +'&password='+passwordAlert;
 
         fetch(urlWithQP).then(function (res){
             return res.json();
@@ -109,4 +111,19 @@ function hasNumbersAndLetters(password){
         i++;
     }
     return number && letter;
+}
+
+function greenBorder(formInput){
+    formInput.classList.remove('red-border');
+    formInput.classList.add('green-border');
+}
+
+function redBorder(formInput){
+    formInput.classList.remove('green-border');
+    formInput.classList.add('red-border');
+}
+
+function clearError(formInput, errorMsg){
+    formInput.classList.remove('green-border', 'red-border');
+    errorMsg.innerText = '';
 }

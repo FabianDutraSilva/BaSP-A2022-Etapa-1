@@ -19,3 +19,11 @@ aside h2, aside h3{
 .sidebar-midbox h3{
     margin: 0px 5px;
 }
+
+.green-border{
+    border: 2px solid green;
+}
+
+.red-border{
+    border: 2px solid red;
+}

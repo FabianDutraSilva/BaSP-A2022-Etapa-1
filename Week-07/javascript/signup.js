@@ -226,11 +226,13 @@ function postalCodeValidation(){
         return false;
     }
     else if (!onlyNumbers(postalCode)){
-        document.getElementById('postal-code-error-msg').innerText = 'Invalid format! Postal code must be only numbers';
+        document.getElementById('postal-code-error-msg').innerText =
+        'Invalid format! Postal code must be only numbers';
         return false;
     }
     else if (postalCode.length != 4 && postalCode.length != 5){
-        document.getElementById('postal-code-error-msg').innerText = 'Invalid format! Postal code must be a 4 or 5 number sequence';
+        document.getElementById('postal-code-error-msg').innerText = 'Invalid format!'+
+        'Postal code must be a 4 or 5 number sequence';
         return false;
     }
     else{
